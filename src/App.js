@@ -1,15 +1,17 @@
-import './App.css';
-import Todo from './components/Todo'
-
+import {Switch, Route,} from "react-router-dom"
+import AllMeetups from './components/pages/AllMeetups'
 
 function App() {
   return (
-  <div className="App">
-    <h1>My todo</h1>
-    <Todo title='learn react'/>
-    <Todo title='learn react more'/>
-    <Todo title='learn react more and more'/>
-  </div>
+    <div className='app'>
+   
+      <Switch>
+        <Route exact path="/" component={<AllMeetups />}>
+          <AllMeetups/>
+        </Route>
+      </Switch>
+ 
+    </div>
   );
 }
 
